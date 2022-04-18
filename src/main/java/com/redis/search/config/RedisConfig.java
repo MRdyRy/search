@@ -25,7 +25,7 @@ public class RedisConfig {
 
     @Bean
     public JedisPool jedisPool() throws URISyntaxException {
-        return new JedisPool(new URI(host+":"+port));
+        return new JedisPool(new URI("redis://"+host+":"+port));
     }
 
     @Bean
